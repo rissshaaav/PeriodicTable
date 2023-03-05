@@ -1,3 +1,7 @@
+:root{
+    --non-metal-color: #f4cf72;
+}
+
 *{
     margin: 0;
     padding: 0;
@@ -41,15 +45,17 @@ header{
 .periodic-table{
     display: grid;
     grid-template-columns: repeat(19, 1fr);
-    grid-template-rows: auto;
+    grid-template-rows: 660px;
+    gap: 5px;
 }
 .element{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 60px;
-    width: 50px;
+    min-height: 60px;
+    max-width: 70px;
+    min-width: 50px;
     font-weight: 900;
 }
 .element-symbol{
@@ -57,4 +63,54 @@ header{
 }
 .element-name{
     font-size: 10px;
+}
+
+
+.descCard-background{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, 0.4);
+    display: none;
+}
+.descCard{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    background-color: var(--non-metal-color);
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    align-items: center;
+    min-width: fit-content;
+    padding: 10px 15px 20px 15px;
+    border-radius: 10px;
+}
+.descCard .head{
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 20px;
+    border-bottom: thin solid;
+}
+.descCard .content{
+    font-size: 20px;
+    font-weight: 500;
+}
+.content ul{
+    list-style: none;
+}
+.close{
+    align-self: flex-end;
+}
+.close button{
+    border: none;
+    background: none;
+}
+.descCard-background.active, .descCard{
+    transition: all 500ms;
+    display: block;
 }
