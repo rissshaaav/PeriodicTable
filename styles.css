@@ -25,7 +25,6 @@ header{
 }
 .options-items{
     display: inline-block;
-    /* margin: 10px 10px; */
 }
 #element-type{
     font-size: large;
@@ -50,7 +49,7 @@ header{
     justify-content: center;
     align-items: center;
     height: 60px;
-    width: 80px;
+    width: 50px;
     font-weight: 900;
 }
 .element-symbol{
