@@ -12,28 +12,28 @@
 </head>
 <body>
     <header>
-        <div class="title">Periodic Table</div>
-        <div class="options">
-            <div class="options-items block-names">
-                <span>s-block</span>
-                <span>p-block</span>
-                <span>d-block</span>
-                <span>f-block</span>
+        <div class="title" onclick="window.location.reload()">Periodic Table</div>
+        <div class="blocks">
+            <div class="block-items block-names">
+                <span onclick="highlightS()">s-block</span>
+                <span onclick="highlightP()">p-block</span>
+                <span onclick="highlightD()">d-block</span>
+                <span onclick="highlightF()">f-block</span>
             </div>
-            <div class="options-items element-type">
+            <div class="block-items element-type">
                 <label for="element-type"><span>Highlight</span> 
-                    <select name="element-type" id="element-type">
+                    <select name="element-type" id="element-type" onchange="highlightByType()">
                     <option value="All">All</option>
-                    <option value="Alkali Metals">Alkali Metals</option>
-                    <option value="Alkaline Metals">Alkaline Metals</option>
-                    <option value="Basic Metals">Basic Metals</option>
-                    <option value="Transitioin Metals">Transitioin Metals</option>
-                    <option value="Semi Metals">Semi Metals</option>
-                    <option value="Non Metals">Non Metals</option>
-                    <option value="Halogen">Halogen</option>
+                    <option value="Alkali Metal">Alkali Metals</option>
+                    <option value="Alkaline Metal">Alkaline Metals</option>
+                    <option value="Basic Metal">Basic Metals</option>
+                    <option value="Transitioin Metal">Transitioin Metals</option>
+                    <option value="Semi Metal">Semi Metals</option>
+                    <option value="Non Metal">Non Metals</option>
+                    <option value="Halogen">Halogens</option>
                     <option value="Inert">Inert</option>
-                    <option value="Actinides">Actinides</option>
-                    <option value="Lanthenides">Lanthenides</option>
+                    <option value="Actinide">Actinides</option>
+                    <option value="Lanthenide">Lanthenides</option>
                     </select>
                 </label>
             </div>
@@ -80,25 +80,25 @@
                 <div class="element">
                     <span class="element-symbol">1</span>
                 </div>
-                <div class="element" onclick="toggleCard(1)">
+                <div class="element s-block alkali-metal" onclick="toggleCard(1)">
                     <span class="element-symbol"><sub>1</sub>H</span><span class="element-name">Hydrogen</span>
                 </div>
-                <div class="element" onclick="toggleCard(3)">
+                <div class="element s-block alkali-metal" onclick="toggleCard(3)">
                     <span class="element-symbol"><sub>3</sub>Li</span><span class="element-name">Lithium</span>
                 </div>
-                <div class="element" onclick="toggleCard(11)">
+                <div class="element s-block alkali-metal" onclick="toggleCard(11)">
                     <span class="element-symbol"><sub>11</sub>Na</span><span class="element-name">Sodium</span>
                 </div>
-                <div class="element" onclick="toggleCard(19)">
+                <div class="element s-block alkali-metal" onclick="toggleCard(19)">
                     <span class="element-symbol"><sub>19</sub>K</span><span class="element-name">Potassium</span>
                 </div>
-                <div class="element" onclick="toggleCard(37)">
+                <div class="element s-block alkali-metal" onclick="toggleCard(37)">
                     <span class="element-symbol"><sub>37</sub>Rb</span><span class="element-name">Rubidium</span>
                 </div>
-                <div class="element" onclick="toggleCard(55)">
+                <div class="element s-block alkali-metal" onclick="toggleCard(55)">
                     <span class="element-symbol"><sub>55</sub>Cs</span><span class="element-name">Caesium</span>
                 </div>
-                <div class="element" onclick="toggleCard(87)">
+                <div class="element s-block alkali-metal" onclick="toggleCard(87)">
                     <span class="element-symbol"><sub>87</sub>Fr</span><span class="element-name">Francium</span>
                 </div>
                 <div class="element">
@@ -118,22 +118,22 @@
                 <div class="element">
                     <span class="element-symbol"></span>
                 </div>
-                <div class="element" onclick="toggleCard(4)">
+                <div class="element s-block alkaline-metal" onclick="toggleCard(4)">
                     <span class="element-symbol"><sub>4</sub>Be</span><span class="element-name">Beryllium</span>
                 </div>
-                <div class="element" onclick="toggleCard(12)">
+                <div class="element s-block alkaline-metal" onclick="toggleCard(12)">
                     <span class="element-symbol"><sub>12</sub>Mg</span><span class="element-name">Magnesium</span>
                 </div>
-                <div class="element" onclick="toggleCard(20)">
+                <div class="element s-block alkaline-metal" onclick="toggleCard(20)">
                     <span class="element-symbol"><sub>20</sub>Ca</span><span class="element-name">Calcium</span>
                 </div>
-                <div class="element" onclick="toggleCard(38)">
+                <div class="element s-block alkaline-metal" onclick="toggleCard(38)">
                     <span class="element-symbol"><sub>38</sub>Sr</span><span class="element-name">Estrontium</span>
                 </div>
-                <div class="element" onclick="toggleCard(56)">
+                <div class="element s-block alkaline-metal" onclick="toggleCard(56)">
                     <span class="element-symbol"><sub>56</sub>Ba</span><span class="element-name">Barium</span>
                 </div>
-                <div class="element" onclick="toggleCard(88)">
+                <div class="element s-block alkaline-metal" onclick="toggleCard(88)">
                     <span class="element-symbol"><sub>88</sub>Ra</span><span class="element-name">Radium</span>
                 </div>
                 <div class="element">
@@ -159,10 +159,10 @@
                 <div class="element">
                     <span class="element-symbol"></span>
                 </div>
-                <div class="element" onclick="toggleCard(21)">
+                <div class="element d-block transition-metal" onclick="toggleCard(21)">
                     <span class="element-symbol"><sub>21</sub>Sc</span><span class="element-name">Scandium</span>
                 </div>
-                <div class="element" onclick="toggleCard(39)">
+                <div class="element d-block transition-metal" onclick="toggleCard(39)">
                     <span class="element-symbol"><sub>39</sub>Y</span><span class="element-name">Yttrium</span>
                 </div>
                 <div class="element" onclick="highlightLanthenide()">
@@ -174,10 +174,10 @@
                 <div class="element">
                     <span class="element-symbol"></span>
                 </div>
-                <div class="element" onclick="toggleCard(57)">
+                <div class="element d-block lanthenide" onclick="toggleCard(57)">
                     <span class="element-symbol"><sub>57</sub>La</span><span class="element-name">Lanthenium</span>
                 </div>
-                <div class="element" onclick="toggleCard(89)">
+                <div class="element d-block actenide" onclick="toggleCard(89)">
                     <span class="element-symbol"><sub>89</sub>Ac</span><span class="element-name">Actenium</span>
                 </div>
             </div>
@@ -194,25 +194,25 @@
                 <div class="element">
                     <span class="element-symbol"></span>
                 </div>
-                <div class="element" onclick="toggleCard(22)">
+                <div class="element d-block transition-metal" onclick="toggleCard(22)">
                     <span class="element-symbol"><sub>22</sub>Ti</span><span class="element-name">Titanium</span>
                 </div>
-                <div class="element" onclick="toggleCard(40)">
+                <div class="element d-block transition-metal" onclick="toggleCard(40)">
                     <span class="element-symbol"><sub>40</sub>Zr</span><span class="element-name">Zirconium</span>
                 </div>
-                <div class="element" onclick="toggleCard(72)">
+                <div class="element d-block transition-metal" onclick="toggleCard(72)">
                     <span class="element-symbol"><sub>72</sub>Hf</span><span class="element-name">Hafnium</span>
                 </div>
-                <div class="element" onclick="toggleCard(104)">
+                <div class="element d-block transition-metal" onclick="toggleCard(104)">
                     <span class="element-symbol"><sub>104</sub>Rf</span><span class="element-name">Rutherfodium</span>
                 </div>
                 <div class="element">
                     <span class="element-symbol"></span>
                 </div>
-                <div class="element" onclick="toggleCard(58)">
+                <div class="element f-block lanthenide" onclick="toggleCard(58)">
                     <span class="element-symbol"><sub>58</sub>Ce</span><span class="element-name">Cerium</span>
                 </div>
-                <div class="element" onclick="toggleCard(90)">
+                <div class="element f-block actenide" onclick="toggleCard(90)">
                     <span class="element-symbol"><sub>90</sub>Th</span><span class="element-name">Thorium</span>
                 </div>
             </div>
@@ -229,25 +229,25 @@
                 <div class="element">
                     <span class="element-symbol"></span>
                 </div>
-                <div class="element" onclick="toggleCard(23)">
+                <div class="element d-block transition-metal" onclick="toggleCard(23)">
                     <span class="element-symbol"><sub>23</sub>V</span><span class="element-name">Vanadium</span>
                 </div>
-                <div class="element" onclick="toggleCard(41)">
+                <div class="element d-block transition-metal" onclick="toggleCard(41)">
                     <span class="element-symbol"><sub>41</sub>Nb</span><span class="element-name">Niobium</span>
                 </div>
-                <div class="element" onclick="toggleCard(73)">
+                <div class="element d-block transition-metal" onclick="toggleCard(73)">
                     <span class="element-symbol"><sub>73</sub>Ta</span><span class="element-name">Tantalum</span>
                 </div>
-                <div class="element" onclick="toggleCard(105)">
+                <div class="element d-block transition-metal" onclick="toggleCard(105)">
                     <span class="element-symbol"><sub>105</sub>Db</span><span class="element-name">Dubnium</span>
                 </div>
                 <div class="element">
                     <span class="element-symbol"></span>
                 </div>
-                <div class="element" onclick="toggleCard(59)">
+                <div class="element f-block lanthenide" onclick="toggleCard(59)">
                     <span class="element-symbol"><sub>59</sub>Pr</span><span class="element-name">Praseodymium</span>
                 </div>
-                <div class="element" onclick="toggleCard(91)">
+                <div class="element f-block actenide" onclick="toggleCard(91)">
                     <span class="element-symbol"><sub>91</sub>Pa</span><span class="element-name">Protactinium</span>
                 </div>
             </div>
@@ -264,25 +264,25 @@
                 <div class="element">
                     <span class="element-symbol"></span>
                 </div>
-                <div class="element" onclick="toggleCard(24)">
+                <div class="element d-block transition-metal" onclick="toggleCard(24)">
                     <span class="element-symbol"><sub>24</sub>Cr</span><span class="element-name">Chromium</span>
                 </div>
-                <div class="element" onclick="toggleCard(42)">
+                <div class="element d-block transition-metal" onclick="toggleCard(42)">
                     <span class="element-symbol"><sub>42</sub>Mo</span><span class="element-name">Molybdenum</span>
                 </div>
-                <div class="element" onclick="toggleCard(74)">
+                <div class="element d-block transition-metal" onclick="toggleCard(74)">
                     <span class="element-symbol"><sub>74</sub>W</span><span class="element-name">Tungsten</span>
                 </div>
-                <div class="element" onclick="toggleCard(106)">
+                <div class="element d-block transition-metal" onclick="toggleCard(106)">
                     <span class="element-symbol"><sub>106</sub>Sg</span><span class="element-name">Seaorgium</span>
                 </div>
                 <div class="element">
                     <span class="element-symbol"></span>
                 </div>
-                <div class="element" onclick="toggleCard(60)">
+                <div class="element f-block lanthenide" onclick="toggleCard(60)">
                     <span class="element-symbol"><sub>60</sub>Nd</span><span class="element-name">Neodynium</span>
                 </div>
-                <div class="element" onclick="toggleCard(92)">
+                <div class="element f-block actenide" onclick="toggleCard(92)">
                     <span class="element-symbol"><sub>92</sub>U</span><span class="element-name">Uranium</span>
                 </div>
             </div>
@@ -299,25 +299,25 @@
                 <div class="element">
                     <span class="element-symbol"></span>
                 </div>
-                <div class="element" onclick="toggleCard(25)">
+                <div class="element d-block transition-metal" onclick="toggleCard(25)">
                     <span class="element-symbol"><sub>25</sub>Mn</span><span class="element-name">Manganese</span>
                 </div>
-                <div class="element" onclick="toggleCard(43)">
+                <div class="element d-block transition-metal" onclick="toggleCard(43)">
                     <span class="element-symbol"><sub>43</sub>Tc</span><span class="element-name">Technetium</span>
                 </div>
-                <div class="element" onclick="toggleCard(75)">
+                <div class="element d-block transition-metal" onclick="toggleCard(75)">
                     <span class="element-symbol"><sub>75</sub>Re</span><span class="element-name">Rhenium</span>
                 </div>
-                <div class="element" onclick="toggleCard(107)">
+                <div class="element d-block transition-metal" onclick="toggleCard(107)">
                     <span class="element-symbol"><sub>107</sub>Bh</span><span class="element-name">Bohrium</span>
                 </div>
                 <div class="element">
                     <span class="element-symbol"></span>
                 </div>
-                <div class="element" onclick="toggleCard(61)">
+                <div class="element f-block lanthenide" onclick="toggleCard(61)">
                     <span class="element-symbol"><sub>61</sub>Pm</span><span class="element-name">Promethium</span>
                 </div>
-                <div class="element" onclick="toggleCard(93)">
+                <div class="element f-block actenide" onclick="toggleCard(93)">
                     <span class="element-symbol"><sub>93</sub>Np</span><span class="element-name">Neptunium</span>
                 </div>
             </div>
@@ -334,25 +334,25 @@
                 <div class="element">
                     <span class="element-symbol"></span>
                 </div>
-                <div class="element" onclick="toggleCard(26)">
+                <div class="element d-block transition-metal" onclick="toggleCard(26)">
                     <span class="element-symbol"><sub>26</sub>Fe</span><span class="element-name">Iron</span>
                 </div>
-                <div class="element" onclick="toggleCard(44)">
+                <div class="element d-block transition-metal" onclick="toggleCard(44)">
                     <span class="element-symbol"><sub>44</sub>Ru</span><span class="element-name">Ruthenium</span>
                 </div>
-                <div class="element" onclick="toggleCard(76)">
+                <div class="element d-block transition-metal" onclick="toggleCard(76)">
                     <span class="element-symbol"><sub>76</sub>Os</span><span class="element-name">Osmium</span>
                 </div>
-                <div class="element" onclick="toggleCard(108)">
+                <div class="element d-block transition-metal" onclick="toggleCard(108)">
                     <span class="element-symbol"><sub>108</sub>Hs</span><span class="element-name">Hassium</span>
                 </div>
                 <div class="element">
                     <span class="element-symbol"></span>
                 </div>
-                <div class="element" onclick="toggleCard(62)">
+                <div class="element f-block lanthenide" onclick="toggleCard(62)">
                     <span class="element-symbol"><sub>62</sub>Sm</span><span class="element-name">Samarium</span>
                 </div>
-                <div class="element" onclick="toggleCard(94)">
+                <div class="element f-block actenide" onclick="toggleCard(94)">
                     <span class="element-symbol"><sub>94</sub>Pu</span><span class="element-name">Plutonium</span>
                 </div>
             </div>
@@ -369,25 +369,25 @@
                 <div class="element">
                     <span class="element-symbol"></span>
                 </div>
-                <div class="element" onclick="toggleCard(27)">
+                <div class="element d-block transition-metal" onclick="toggleCard(27)">
                     <span class="element-symbol"><sub>27</sub>Co</span><span class="element-name">Cobalt</span>
                 </div>
-                <div class="element" onclick="toggleCard(45)">
+                <div class="element d-block transition-metal" onclick="toggleCard(45)">
                     <span class="element-symbol"><sub>45</sub>Rh</span><span class="element-name">Rhodium</span>
                 </div>
-                <div class="element" onclick="toggleCard(77)">
+                <div class="element d-block transition-metal" onclick="toggleCard(77)">
                     <span class="element-symbol"><sub>77</sub>Ir</span><span class="element-name">Iridium</span>
                 </div>
-                <div class="element" onclick="toggleCard(109)">
+                <div class="element d-block transition-metal" onclick="toggleCard(109)">
                     <span class="element-symbol"><sub>109</sub>Mt</span><span class="element-name">Meitnerium</span>
                 </div>
                 <div class="element">
                     <span class="element-symbol"></span>
                 </div>
-                <div class="element" onclick="toggleCard(63)">
+                <div class="element f-block lanthenide" onclick="toggleCard(63)">
                     <span class="element-symbol"><sub>63</sub>Eu</span><span class="element-name">Europium</span>
                 </div>
-                <div class="element" onclick="toggleCard(95)">
+                <div class="element f-block actenide" onclick="toggleCard(95)">
                     <span class="element-symbol"><sub>95</sub>Am</span><span class="element-name">Americium</span>
                 </div>
             </div>
@@ -404,25 +404,25 @@
                 <div class="element">
                     <span class="element-symbol"></span>
                 </div>
-                <div class="element" onclick="toggleCard(28)">
+                <div class="element d-block transition-metal" onclick="toggleCard(28)">
                     <span class="element-symbol"><sub>28</sub>Ni</span><span class="element-name">Nickel</span>
                 </div>
-                <div class="element" onclick="toggleCard(46)">
+                <div class="element d-block transition-metal" onclick="toggleCard(46)">
                     <span class="element-symbol"><sub>46</sub>Pd</span><span class="element-name">Palladium</span>
                 </div>
-                <div class="element" onclick="toggleCard(78)">
+                <div class="element d-block transition-metal" onclick="toggleCard(78)">
                     <span class="element-symbol"><sub>78</sub>Pt</span><span class="element-name">Platinum</span>
                 </div>
-                <div class="element" onclick="toggleCard(110)">
+                <div class="element d-block transition-metal" onclick="toggleCard(110)">
                     <span class="element-symbol"><sub>110</sub>Ds</span><span class="element-name">Darmstadtium</span>
                 </div>
                 <div class="element">
                     <span class="element-symbol"></span>
                 </div>
-                <div class="element" onclick="toggleCard(64)">
+                <div class="element f-block lanthenide" onclick="toggleCard(64)">
                     <span class="element-symbol"><sub>64</sub>Gd</span><span class="element-name">Gadolinium</span>
                 </div>
-                <div class="element" onclick="toggleCard(96)">
+                <div class="element f-block actenide" onclick="toggleCard(96)">
                     <span class="element-symbol"><sub>96</sub>Cm</span><span class="element-name">Curium</span>
                 </div>
             </div>
@@ -439,25 +439,25 @@
                 <div class="element">
                     <span class="element-symbol"></span>
                 </div>
-                <div class="element" onclick="toggleCard(29)">
+                <div class="element d-block transition-metal" onclick="toggleCard(29)">
                     <span class="element-symbol"><sub>29</sub>Cu</span><span class="element-name">Copper</span>
                 </div>
-                <div class="element" onclick="toggleCard(47)">
+                <div class="element d-block transition-metal" onclick="toggleCard(47)">
                     <span class="element-symbol"><sub>47</sub>Ag</span><span class="element-name">Silver</span>
                 </div>
-                <div class="element" onclick="toggleCard(79)">
+                <div class="element d-block transition-metal" onclick="toggleCard(79)">
                     <span class="element-symbol"><sub>79</sub>Au</span><span class="element-name">Gold</span>
                 </div>
-                <div class="element" onclick="toggleCard(111)">
+                <div class="element d-block transition-metal" onclick="toggleCard(111)">
                     <span class="element-symbol"><sub>111</sub>Rg</span><span class="element-name">Roentgenium</span>
                 </div>
                 <div class="element">
                     <span class="element-symbol"></span>
                 </div>
-                <div class="element" onclick="toggleCard(65)">
+                <div class="element f-block lanthenide" onclick="toggleCard(65)">
                     <span class="element-symbol"><sub>65</sub>Tb</span><span class="element-name">Terbium</span>
                 </div>
-                <div class="element" onclick="toggleCard(97)">
+                <div class="element f-block actenide" onclick="toggleCard(97)">
                     <span class="element-symbol"><sub>97</sub>Bk</span><span class="element-name">Berkelium</span>
                 </div>
             </div>
@@ -474,25 +474,25 @@
                 <div class="element">
                     <span class="element-symbol"></span>
                 </div>
-                <div class="element" onclick="toggleCard(30)">
+                <div class="element d-block transition-metal" onclick="toggleCard(30)">
                     <span class="element-symbol"><sub>30</sub>Zn</span><span class="element-name">Zinc</span>
                 </div>
-                <div class="element" onclick="toggleCard(48)">
+                <div class="element d-block transition-metal" onclick="toggleCard(48)">
                     <span class="element-symbol"><sub>48</sub>Cd</span><span class="element-name">Cadmium</span>
                 </div>
-                <div class="element" onclick="toggleCard(80)">
+                <div class="element d-block transition-metal" onclick="toggleCard(80)">
                     <span class="element-symbol"><sub>80</sub>Hg</span><span class="element-name">Mercury</span>
                 </div>
-                <div class="element" onclick="toggleCard(112)">
+                <div class="element d-block transition-metal" onclick="toggleCard(112)">
                     <span class="element-symbol"><sub>112</sub>Cn</span><span class="element-name">Copernicium</span>
                 </div>
                 <div class="element">
                     <span class="element-symbol"></span>
                 </div>
-                <div class="element" onclick="toggleCard(66)">
+                <div class="element f-block lanthenide" onclick="toggleCard(66)">
                     <span class="element-symbol"><sub>66</sub>Dy</span><span class="element-name">Dysprosium</span>
                 </div>
-                <div class="element" onclick="toggleCard(98)">
+                <div class="element f-block actenide" onclick="toggleCard(98)">
                     <span class="element-symbol"><sub>98</sub>Cf</span><span class="element-name">Californium</span>
                 </div>
             </div>
@@ -503,31 +503,31 @@
                 <div class="element">
                     <span class="element-symbol"></span>
                 </div>
-                <div class="element" onclick="toggleCard(5)">
+                <div class="element p-block semi-metal" onclick="toggleCard(5)">
                     <span class="element-symbol"><sub>5</sub>B</span><span class="element-name">Boron</span>
                 </div>
-                <div class="element" onclick="toggleCard(13)">
+                <div class="element p-block basic-metal" onclick="toggleCard(13)">
                     <span class="element-symbol"><sub>13</sub>Al</span><span class="element-name">Aluminium</span>
                 </div>
-                <div class="element" onclick="toggleCard(31)">
+                <div class="element p-block basic-metal" onclick="toggleCard(31)">
                     <span class="element-symbol"><sub>31</sub>Ga</span><span class="element-name">Gallium</span>
                 </div>
-                <div class="element" onclick="toggleCard(49)">
+                <div class="element p-block basic-metal" onclick="toggleCard(49)">
                     <span class="element-symbol"><sub>49</sub>In</span><span class="element-name">Indium</span>
                 </div>
-                <div class="element" onclick="toggleCard(81)">
+                <div class="element p-block basic-metal" onclick="toggleCard(81)">
                     <span class="element-symbol"><sub>81</sub>Tl</span><span class="element-name">Thallium</span>
                 </div>
-                <div class="element" onclick="toggleCard(113)">
+                <div class="element p-block basic-metal" onclick="toggleCard(113)">
                     <span class="element-symbol"><sub>113</sub>Nh</span><span class="element-name">Nihonium</span>
                 </div>
                 <div class="element">
                     <span class="element-symbol"></span>
                 </div>
-                <div class="element" onclick="toggleCard(67)">
+                <div class="element f-block lanthenide" onclick="toggleCard(67)">
                     <span class="element-symbol"><sub>67</sub>Ho</span><span class="element-name">Holmium</span>
                 </div>
-                <div class="element" onclick="toggleCard(99)">
+                <div class="element f-block actenide" onclick="toggleCard(99)">
                     <span class="element-symbol"><sub>99</sub>Es</span><span class="element-name">Einsteinium</span>
                 </div>
             </div>
@@ -538,31 +538,31 @@
                 <div class="element">
                     <span class="element-symbol"></span>
                 </div>
-                <div class="element" onclick="toggleCard(6)">
+                <div class="element p-block non-metal" onclick="toggleCard(6)">
                     <span class="element-symbol"><sub>6</sub>C</span><span class="element-name">Carbon</span>
                 </div>
-                <div class="element" onclick="toggleCard(14)">
+                <div class="element p-block semi-metal" onclick="toggleCard(14)">
                     <span class="element-symbol"><sub>14</sub>Si</span><span class="element-name">Silicon</span>
                 </div>
-                <div class="element" onclick="toggleCard(32)">
+                <div class="element p-block semi-metal" onclick="toggleCard(32)">
                     <span class="element-symbol"><sub>32</sub>Ge</span><span class="element-name">Germanium</span>
                 </div>
-                <div class="element" onclick="toggleCard(50)">
+                <div class="element p-block basic-metal" onclick="toggleCard(50)">
                     <span class="element-symbol"><sub>50</sub>Sn</span><span class="element-name">Tin</span>
                 </div>
-                <div class="element" onclick="toggleCard(82)">
+                <div class="element p-block basic-metal" onclick="toggleCard(82)">
                     <span class="element-symbol"><sub>82</sub>Pb</span><span class="element-name">Lead</span>
                 </div>
-                <div class="element" onclick="toggleCard(114)">
+                <div class="element p-block basic-metal" onclick="toggleCard(114)">
                     <span class="element-symbol"><sub>114</sub>Fl</span><span class="element-name">Flerovium</span>
                 </div>
                 <div class="element">
                     <span class="element-symbol"></span>
                 </div>
-                <div class="element" onclick="toggleCard(68)">
+                <div class="element f-block lanthenide" onclick="toggleCard(68)">
                     <span class="element-symbol"><sub>68</sub>Er</span><span class="element-name">Erbium</span>
                 </div>
-                <div class="element" onclick="toggleCard(100)">
+                <div class="element f-block actenide" onclick="toggleCard(100)">
                     <span class="element-symbol"><sub>100</sub>Fm</span><span class="element-name">Fermium</span>
                 </div>
             </div>
@@ -573,31 +573,31 @@
                 <div class="element">
                     <span class="element-symbol"></span>
                 </div>
-                <div class="element" onclick="toggleCard(7)">
+                <div class="element p-block non-metal" onclick="toggleCard(7)">
                     <span class="element-symbol"><sub>7</sub>N</span><span class="element-name">Nitrogen</span>
                 </div>
-                <div class="element" onclick="toggleCard(15)">
+                <div class="element p-block non-metal" onclick="toggleCard(15)">
                     <span class="element-symbol"><sub>15</sub>P</span><span class="element-name">Phosphorous</span>
                 </div>
-                <div class="element" onclick="toggleCard(33)">
+                <div class="element p-block semi-metal" onclick="toggleCard(33)">
                     <span class="element-symbol"><sub>33</sub>As</span><span class="element-name">Arsenic</span>
                 </div>
-                <div class="element" onclick="toggleCard(51)">
+                <div class="element p-block semi-metal onclick="toggleCard(51)">
                     <span class="element-symbol"><sub>51</sub>Sb</span><span class="element-name">Antimony</span>
                 </div>
-                <div class="element" onclick="toggleCard(83)">
+                <div class="element p-block basic-metal" onclick="toggleCard(83)">
                     <span class="element-symbol"><sub>83</sub>Bi</span><span class="element-name">Bismuth</span>
                 </div>
-                <div class="element" onclick="toggleCard(115)">
+                <div class="element p-block basic-metal" onclick="toggleCard(115)">
                     <span class="element-symbol"><sub>115</sub>Mc</span><span class="element-name">Moscovium</span>
                 </div>
                 <div class="element">
                     <span class="element-symbol"></span>
                 </div>
-                <div class="element" onclick="toggleCard(69)">
+                <div class="element f-block lanthenide" onclick="toggleCard(69)">
                     <span class="element-symbol"><sub>69</sub>Tm</span><span class="element-name">Thulium</span>
                 </div>
-                <div class="element" onclick="toggleCard(101)">
+                <div class="element f-block actenide" onclick="toggleCard(101)">
                     <span class="element-symbol"><sub>101</sub>Md</span><span class="element-name">Mendelevium</span>
                 </div>
             </div>
@@ -608,31 +608,31 @@
                 <div class="element">
                     <span class="element-symbol"></span>
                 </div>
-                <div class="element" onclick="toggleCard(8)">
+                <div class="element p-block non-metal" onclick="toggleCard(8)">
                     <span class="element-symbol"><sub>8</sub>O</span><span class="element-name">Oxygen</span>
                 </div>
-                <div class="element" onclick="toggleCard(16)">
+                <div class="element p-block non-metal" onclick="toggleCard(16)">
                     <span class="element-symbol"><sub>16</sub>S</span><span class="element-name">Sulphur</span>
                 </div>
-                <div class="element" onclick="toggleCard(34)">
+                <div class="element p-block non-metal" onclick="toggleCard(34)">
                     <span class="element-symbol"><sub>34</sub>Se</span><span class="element-name">Selenium</span>
                 </div>
-                <div class="element" onclick="toggleCard(52)">
+                <div class="element p-block semi-metal" onclick="toggleCard(52)">
                     <span class="element-symbol"><sub>52</sub>Te</span><span class="element-name">Tellurium</span>
                 </div>
-                <div class="element" onclick="toggleCard(84)">
+                <div class="element p-block semi-metal" onclick="toggleCard(84)">
                     <span class="element-symbol"><sub>84</sub>Po</span><span class="element-name">Polonium</span>
                 </div>
-                <div class="element" onclick="toggleCard(116)">
+                <div class="element p-block basic-metal" onclick="toggleCard(116)">
                     <span class="element-symbol"><sub>116</sub>Lv</span><span class="element-name">Livermorium</span>
                 </div>
                 <div class="element">
                     <span class="element-symbol"></span>
                 </div>
-                <div class="element" onclick="toggleCard(70)">
+                <div class="element f-block lanthenide" onclick="toggleCard(70)">
                     <span class="element-symbol"><sub>70</sub>Yb</span><span class="element-name">Ytterbium</span>
                 </div>
-                <div class="element" onclick="toggleCard(102)">
+                <div class="element f-block actenide" onclick="toggleCard(102)">
                     <span class="element-symbol"><sub>102</sub>Lv</span><span class="element-name">Nobelium</span>
                 </div>
             </div>
@@ -643,31 +643,31 @@
                 <div class="element">
                     <span class="element-symbol"></span>
                 </div>
-                <div class="element" onclick="toggleCard(9)">
+                <div class="element p-block halogen" onclick="toggleCard(9)">
                     <span class="element-symbol"><sub>9</sub>F</span><span class="element-name">Fluorine</span>
                 </div>
-                <div class="element" onclick="toggleCard(17)">
+                <div class="element p-block halogen" onclick="toggleCard(17)">
                     <span class="element-symbol"><sub>17</sub>Cl</span><span class="element-name">Chlorine</span>
                 </div>
-                <div class="element" onclick="toggleCard(35)">
+                <div class="element p-block halogen" onclick="toggleCard(35)">
                     <span class="element-symbol"><sub>35</sub>Br</span><span class="element-name">Bromine</span>
                 </div>
-                <div class="element" onclick="toggleCard(53)">
+                <div class="element p-block halogen" onclick="toggleCard(53)">
                     <span class="element-symbol"><sub>53</sub>I</span><span class="element-name">Iodine</span>
                 </div>
-                <div class="element" onclick="toggleCard(85)">
+                <div class="element p-block halogen" onclick="toggleCard(85)">
                     <span class="element-symbol"><sub>85</sub>At</span><span class="element-name">Astatine</span>
                 </div>
-                <div class="element" onclick="toggleCard(117)">
+                <div class="element p-block halogen" onclick="toggleCard(117)">
                     <span class="element-symbol"><sub>117</sub>Ts</span><span class="element-name">Tennessine</span>
                 </div>
                 <div class="element">
                     <span class="element-symbol"></span>
                 </div>
-                <div class="element" onclick="toggleCard(71)">
+                <div class="element f-block lanthenide" onclick="toggleCard(71)">
                     <span class="element-symbol"><sub>71</sub>Lu</span><span class="element-name">Lutetium</span>
                 </div>
-                <div class="element" onclick="toggleCard(103)">
+                <div class="element f-block actinide" onclick="toggleCard(103)">
                     <span class="element-symbol"><sub>103</sub>Lr</span><span class="element-name">Lawrencium</span>
                 </div>
             </div>
@@ -675,25 +675,25 @@
                 <div class="element">
                     <span class="element-symbol">18</span>
                 </div>
-                <div class="element" onclick="toggleCard(2)">
+                <div class="element s-block inert" onclick="toggleCard(2)">
                     <span class="element-symbol"><sub>2</sub>He</span><span class="element-name">Helium</span>
                 </div>
-                <div class="element" onclick="toggleCard(10)">
+                <div class="element p-block inert" onclick="toggleCard(10)">
                     <span class="element-symbol"><sub>10</sub>Ne</span><span class="element-name">Neon</span>
                 </div>
-                <div class="element" onclick="toggleCard(18)">
+                <div class="element p-block inert" onclick="toggleCard(18)">
                     <span class="element-symbol"><sub>18</sub>Ar</span><span class="element-name">Argon</span>
                 </div>
-                <div class="element" onclick="toggleCard(36)">
+                <div class="element p-block inert" onclick="toggleCard(36)">
                     <span class="element-symbol"><sub>36</sub>Kr</span><span class="element-name">Krypton</span>
                 </div>
-                <div class="element" onclick="toggleCard(54)">
+                <div class="element p-block inert" onclick="toggleCard(54)">
                     <span class="element-symbol"><sub>54</sub>Xe</span><span class="element-name">Xenon</span>
                 </div>
-                <div class="element" onclick="toggleCard(86)">
+                <div class="element p-block inert" onclick="toggleCard(86)">
                     <span class="element-symbol"><sub>86</sub>Rn</span><span class="element-name">Radon</span>
                 </div>
-                <div class="element" onclick="toggleCard(118)">
+                <div class="element p-block inert" onclick="toggleCard(118)">
                     <span class="element-symbol"><sub>118</sub>Og</span><span class="element-name">Oganesson</span>
                 </div>
                 <div class="element">
