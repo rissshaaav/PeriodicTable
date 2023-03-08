@@ -160,7 +160,3 @@ header{
     background-color: var(--f-block);
     border-radius: 10px;
 }
-.highlight-non-metal{
-    background-color: var(--non-metal-color);
-    border-radius: 10px;
-}

@@ -29,12 +29,3 @@ const highlightF = () => {
         fBlock[i].classList.toggle('highlight-f');
     }
 }
-
-const highlightByType = () => {
-    let elementType = document.getElementById('element-type');
-    let selectedElementType = elementType.options[elementType.selectedIndex].value.replace(/ /g, "-").toLowerCase();
-    let elementList = document.getElementsByClassName(selectedElementType);
-    for(let i=0; i<elementList.length; i++){
-        elementList[i].classList.toggle('highlight-'+selectedElementType);
-    }
-}
